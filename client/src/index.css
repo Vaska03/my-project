@@ -1,0 +1,301 @@
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 12px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #ffb400;
+}
+
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+
+.home {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+.home img {
+  height: 40px;
+  margin-right: 8px;
+}
+
+.home-text {
+  font-size: 1.1rem;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 18px; /* разстояние между линковете */
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #333;
+  color: #ffb400;
+}
+
+
+.nav-user, .nav-guest {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+.footer {
+  background-color: #1e1e2f;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.book {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.book-cover {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book h2 {
+  margin: 12px 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.book p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.details-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #ffb400;
+  outline: none;
+}
+
+form button {
+  background-color: #ffb400;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e09a00;
+}
+
+
+button {
+  background-color: #ffb400;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e09a00;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+
+.book-details {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.book-details img {
+  margin: 12px 0;
+  border-radius: 8px;
+}
+
+.book-details button {
+  margin-right: 12px;
+}
+
+
+#home-page {
+  padding: 30px;
+  text-align: center;
+}
+
+#home-page h1 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+
+#home-page .books-container {
+  display: flex;
+  justify-content: center;   
+  flex-wrap: wrap;           
+  gap: 25px;                
+}
+
+/* Карта за книга */
+#home-page .book {
+  max-width: 320px;         
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#home-page .book:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+#home-page .book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#home-page .book h2 {
+  margin: 12px 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+#home-page .book p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #555;
+}

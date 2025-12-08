@@ -40,12 +40,11 @@ const bookSchema = new Schema({
         type: String, 
         required: [true, 'Description is required'],
         minlength: [20, 'Description must be at least 20 charakters long'],
-        maxlength: [1000, 'Description cannot exceed 1000 charakters long']
+        maxlength: [100000, 'Description cannot exceed 1000 charakters long']
     },
 
     coverImage: {
         type: String,
-        required: [true, 'Cover Image URL is required'],
         
     },
    

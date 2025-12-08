@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './Book.css';
+
 
 export default function Book({
     _id, 

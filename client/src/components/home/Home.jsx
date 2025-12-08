@@ -20,21 +20,17 @@ export default function Home() {
   }, []);
 
  
-  const addBook = (book) => {
-    setBooks(prev => [book, ...prev]);
-  };
+  
 
   return (
     <section id="home-page">
-      <h1>Books Catalog</h1>
+      <h1>All Books</h1>
       {books.length === 0 && <p>No books available</p>}
       <div className="books-grid">
         {books.map(book => <Book key={book._id} {...book} />)}
       </div>
    
-      <button onClick={() => addBook({ _id: Date.now(), title: 'New Book', author: 'Author' })}>
-        Add Book
-      </button>
+     
     </section>
   );
 }

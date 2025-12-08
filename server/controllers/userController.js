@@ -18,6 +18,7 @@ userController.post('/register', async (req, res) => {
         const token = await register(username, email, password);
         res.status(201).json({
             message: 'You have registered successfully!',
+            user: { username, email },
             token
         });
     } catch (err) {
@@ -37,6 +38,7 @@ userController.post('/login', async (req, res) => {
         const token = await login(email, password);
         res.status(200).json({
             message: 'You have logged in successfully!',
+            user: {email},
             token
         });
     } catch (err) {
